@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos do DOM </h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id = "divid">Eu sou a div id</div>
+    <div class = "divclass">eu sou a div class</div>
+    <div name = "divname">Eu sou a div name</div>
+
+    <div id = "divseletor">Exemplo de Query id selector usa #</div>
+    <div class = "divseletor">Exemplo de Query selector class usa o ponto . </div>
+    
+    <script>
+        // tras configuraçoes da pagina charset, url
+         window.document.write(window.document.charset)
+
+        // seleccionar elementos por marca - Name e guarda numa variavel
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        // escrevo o elemento guardado na tela
+        window.document.write('Texto dentro ' + p1.innerText)
+
+        // escrevo o elemento guardado na tela mantendo a formatação
+        window.document.write('Texto dentro ' + p1.innerHTML)
+
+        // Altero a cor utilizando a variavel
+        p1.style.color = 'blue'
+
+        // alterando a cor de fundo do body
+        var corpo = window.document.body
+        corpo.style.background = 'green'
+
+        // Seleccionar o elemento por ID
+        var d = window.document.getElementById('divid')
+        d.style.background = 'blue'
+        // Alterando o texto da DIV
+        //d.innerText = 'Estou aguardando...'
+
+
+        // Seleccionar o elemento por name(ele esta no plural Elements tem que especificar o elemento [0])
+        var dn = window.document.getElementsByName('divname')[0]
+        dn.style.background = 'red'
+
+        // Seleccionar o elemento por class(ele esta no plural Elements tem que especificar o elemento [0])
+        var dc = window.document.getElementsByClassName('divclass')[0]
+        dc.style.background = 'black'
+
+        // Selecao recomendada querySelector # para name e . ponto para id
+        var dq = window.document.querySelector('div#divseletor')
+        dq.style.background = 'orange'
+
+
+        // Selecao recomendada querySelector (elementos css) # para name e . ponto para id
+        var dm = window.document.querySelector('div.divseletor')
+        dm.style.background = 'gray'
+
+
+
+
+
+
+        
+        // 
+
+    </script>
+
+
+</body>
+</html>
