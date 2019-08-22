@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Você é Uruguaio</h1>
+    Digite Sua Nacionalidade <input type="text" name="tnac" id="tnac">
+    <input type="button" value="Verificar" onclick="vernac()">
+
+    <div id=res>
+    </div>
+    <script>
+        function vernac(){
+        var n = document.querySelector('input#tnac').value
+        var r = document.querySelector('div#res')
+        
+        if( n == "Uruguaio"){
+            r.innerHTML = (`Voce é Uruguaio`)
+        }else{
+            r.innerHTML = (`Voce é extrangeiro`)
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>
